@@ -24,17 +24,6 @@
 | user   | references | null: false, foreign_key: true |
 - belongs_to :user
 - has_many :buy
-
-## comment
-| Column | Type       | Options                        |
-| ------ | ---------- | ------------------------------ |
-| user   | references | null: false, foreign_key: true |
-| room   | references | null: false, foreign_key: true |
-| text        | text       | null: false       |
-### Association
-- belongs_to :item
-- belongs_to :user
-
 ## buy
 | Column | Type       | Options                        |
 | ------ | ---------- | ------------------------------ |
@@ -49,5 +38,21 @@
 | phone number |integer | null:false |
 | user   | references | null: false, foreign_key: true |
 | item   | references | null: false, foreign_key: true |
+- belongs_to :item
+- belongs_to :user
+
+
+
+
+
+
+
+## comment
+| Column | Type       | Options                        |
+| ------ | ---------- | ------------------------------ |
+| user   | references | null: false, foreign_key: true |
+| room   | references | null: false, foreign_key: true |
+| text        | text       | null: false       |
+### Association
 - belongs_to :item
 - belongs_to :user
