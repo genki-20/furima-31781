@@ -81,7 +81,7 @@ RSpec.describe User, type: :model do
         @user.valid?
         expect(@user.errors.full_messages).to include('First name kanji ユーザー本名が正しくありません')
       end
-      it 'first_name_kanjiが空では登録できない' do
+      it 'first_name_kanjiが全角以外では登録できない' do
         @user.first_name_kanji = 'aaa'
         @user.valid?
         expect(@user.errors.full_messages).to include('First name kanji ユーザー本名が正しくありません')
