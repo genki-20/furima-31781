@@ -25,17 +25,9 @@ class ItemsController < ApplicationController
   def edit
   end
 
-  def destroy
-    if @item.destroy
-      redirect_to root_path
-    else
-      render :show
-    end
-  end
-
   private
 
   def item_params
-    params.require(:item).permit(:product_name, :explanatory_name, :category_id, :status_id, :delivery_fee_id, :area_id, :days_id, :price, :image).merge(user_id: current_user.id)
+    params.require(:item).permit(:product_name, :explanatory_name, :category_id, :status_id, :delivery_fee_id, :area_id, :delivery_day_id, :price, :image).merge(user_id: current_user.id)
   end
 end
