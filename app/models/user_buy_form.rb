@@ -10,6 +10,8 @@ class UserBuyForm
     validates :municipality
     validates :phone_number, format: { with: /\A\d{11}\z/, message: 'is invalid.' }, length: { maximum: 11 }
     validates :address
+    validates :item_id
+    validates :user_id
   end
   with_options numericality: { other_than: 0, message: "can't be blank" } do
     validates :prefecture_id
