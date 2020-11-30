@@ -6,13 +6,17 @@ RSpec.describe UserBuyForm, type: :model do
   end
 
   describe '商品購入、配送先' do
-    context '商品出品ができる' do
+    context '商品購入ができる' do
       it 'postal_code prefecture municipality  phone_number address,token,が存在すれば登録できる' do
+        expect(@user_buy_form).to be_valid
+      end
+      it '建物名が空でも購入できること' do
+        @user_buy_form.building_name = ""
         expect(@user_buy_form).to be_valid
       end
     end
 
-    context '商品出品がうまくいかないとき' do
+    context '商品購入がうまくいかないとき' do
       it 'tokenが空では登録できないこと' do
         @user_buy_form.token = nil
         @user_buy_form.valid?
