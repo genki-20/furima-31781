@@ -21,7 +21,11 @@ class Item < ApplicationRecord
     validates :image
   end
 
+<<<<<<< HEAD
   with_options numericality: { other_than: 0, message: "を入力してください" } do
+=======
+  with_options numericality: { other_than: 0, message: 'を入力してください' } do
+>>>>>>> 1f2f392482853f6c26417e0c653423e3b7ffcbae
     validates :category_id
     validates :status_id
     validates :delivery_fee_id

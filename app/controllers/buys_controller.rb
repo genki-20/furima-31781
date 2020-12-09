@@ -2,7 +2,7 @@ class BuysController < ApplicationController
   before_action :authenticate_user!, only: [:index]
   before_action :set_item
   def index
-    redirect_to root_path if current_user.id == @item.user_id || @item.buy != nil
+    redirect_to root_path if current_user.id == @item.user_id || !@item.buy.nil?
     @user_buy_form = UserBuyForm.new
   end
 
@@ -31,6 +31,7 @@ class BuysController < ApplicationController
       currency: 'jpy'
     )
   end
+
   def set_item
     @item = Item.find(params[:item_id])
   end
