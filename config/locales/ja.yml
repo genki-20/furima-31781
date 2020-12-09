@@ -18,9 +18,4 @@ ja:
        area_id: 発送元の地域 
        delivery_day_id: 発送までの日数 
        price: 販売価格
-       
-  activemodel:
-    attributes:
-      user_buy_form:
-        address: った
       
