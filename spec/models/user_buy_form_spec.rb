@@ -11,7 +11,7 @@ RSpec.describe UserBuyForm, type: :model do
         expect(@user_buy_form).to be_valid
       end
       it '建物名が空でも購入できること' do
-        @user_buy_form.building_name = ""
+        @user_buy_form.building_name = ''
         expect(@user_buy_form).to be_valid
       end
     end
