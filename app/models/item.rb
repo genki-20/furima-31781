@@ -17,11 +17,11 @@ class Item < ApplicationRecord
     validates :delivery_fee_id
     validates :area_id
     validates :delivery_day_id
-    validates :price, numericality: { greater_than_or_equal_to: 300, less_than_or_equal_to: 9_999_999, format: { with: /\A[0-9]+\z/ }, message: 'is out of setting range' }
+    validates :price, numericality: { greater_than_or_equal_to: 300, less_than_or_equal_to: 9_999_999, format: { with: /\A[0-9]+\z/ }, message: 'が正しくありません' }
     validates :image
   end
 
-  with_options numericality: { other_than: 0, message: "can't be blank" } do
+  with_options numericality: { other_than: 0, message: "を入力してください" } do
     validates :category_id
     validates :status_id
     validates :delivery_fee_id
