@@ -47,19 +47,3 @@
 | phone_number |string | null:false |
 | buy   | references | null: false, foreign_key: true |
 - belongs_to :buy
-
-
-
-
-
-
-
-## comment
-| Column | Type       | Options                        |
-| ------ | ---------- | ------------------------------ |
-| user   | references | null: false, foreign_key: true |
-| room   | references | null: false, foreign_key: true |
-| text        | text       | null: false       |
-### Association
-- belongs_to :item
-- belongs_to :user
